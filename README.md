@@ -20,5 +20,8 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### DEPLOY PROJECTS TO NAMECHEAP SERVER (CPANEL)
+#### Check deploy script to copy files from your local computer
+```
+sh deploy/deploy.sh
+```
