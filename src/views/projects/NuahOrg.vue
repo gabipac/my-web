@@ -5,7 +5,7 @@
                 bg_title="Nuah.Org"
                 name_title="Nuah.Org"
                 subname_title="about this project"
-                :img_intro="require('@/assets/imgs/project2.jpg')">
+                :img_intro="require('@/assets/imgs/logo-nuah-org.svg')">
             <div class="ml-md-10 ml-lg-10">
                 <p class="mb-3"><strong>Client: </strong>NUAH</p>
                 <p class="mb-3"><strong>Category: </strong>Crypto startup</p>

@@ -12,7 +12,7 @@
             </v-row>
 
             <v-row justify="center" class="mt-16">
-                <v-col cols="10" sm="10" md="5" align="center" content="center">
+                <v-col cols="10" sm="10" md="5" align="center" content="center" class="pa-16">
                     <v-img :aspect-ratio="1/1" max-width="450" :src="img_intro"></v-img>
                 </v-col>
 

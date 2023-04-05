@@ -2,10 +2,10 @@
     <section>
         <project-card
                 id="nuahuni"
-                bg_title="Nuah.University"
-                name_title="Nuah.University"
+                bg_title="Nuah University"
+                name_title="Nuah University"
                 subname_title="about this project"
-                :img_intro="require('@/assets/imgs/project2.jpg')">
+                :img_intro="require('@/assets/imgs/logo-nuah-uni.svg')">
             <div class="ml-md-10 ml-lg-10">
                 <p class="mb-3"><strong>Client: </strong>NUAH</p>
                 <p class="mb-3"><strong>Category: </strong>Crypto startup</p>
@@ -56,9 +56,8 @@
                                                 <v-card-title class="d-flex flex-column align-center pr-5 pl-5">
                                                     <p class="layout-title" v-html="layout.title"></p>
                                                 </v-card-title>
-                                                <v-dialog v-model="dialog"
-                                                          width="auto">
-                                                    <img :src="layout.img"/>
+                                                <v-dialog v-model="dialog" content-class="photo-dialog" max-width="800px">
+                                                    <img :src="layout.img" />
                                                 </v-dialog>
                                             </div>
                                         </v-expand-transition>
@@ -87,28 +86,28 @@
             dialog: false,
             layouts: [
                 {
-                    title: 'Logo',
-                    img: require('@/assets/imgs/project1.jpg'),
+                    title: 'Nav bars',
+                    img: require('@/assets/imgs/nu-doble-navbar.jpg'),
                 },
                 {
-                    title: 'Banner',
-                    img: require('@/assets/imgs/project2.jpg'),
+                    title: 'UI',
+                    img: require('@/assets/imgs/nu-loadable-items.jpg'),
                 },
                 {
-                    title: 'Logo',
-                    img: require('@/assets/imgs/project1.jpg'),
+                    title: 'Pop-up form',
+                    img: require('@/assets/imgs/nu-modal-form.jpg'),
                 },
                 {
-                    title: 'Banner',
-                    img: require('@/assets/imgs/project2.jpg'),
+                    title: 'Modal info',
+                    img: require('@/assets/imgs/nu-modal-info.jpg'),
                 },
                 {
-                    title: 'Logo',
-                    img: require('@/assets/imgs/project1.jpg'),
+                    title: 'Modal videos',
+                    img: require('@/assets/imgs/nu-modal-videos.jpg'),
                 },
                 {
-                    title: 'Banner',
-                    img: require('@/assets/imgs/project2.jpg'),
+                    title: 'UI',
+                    img: require('@/assets/imgs/nu-select-tabs.jpg'),
                 },
             ],
         }),
@@ -164,9 +163,10 @@
             line-height: 1;
             color: #393D51;
             text-transform: uppercase;
-            font-size: 50px;
+            font-size: 35px;
             text-align: center;
             font-weight: 600;
+            word-break: break-word;
             @media only screen and (max-width: 960px) {
                 font-size: 35px;
             }

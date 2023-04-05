@@ -5,7 +5,7 @@
         bg_title="Culture"
         name_title="Culture"
         subname_title="about this project"
-        :img_intro="require('@/assets/imgs/project2.jpg')">
+        :img_intro="require('@/assets/imgs/logo-culture.svg')">
             <div class="ml-md-10 ml-lg-10">
                 <p class="mb-3"><strong>Client: </strong>CULTURE</p>
                 <p class="mb-3"><strong>Category: </strong>Fashion design startup</p>

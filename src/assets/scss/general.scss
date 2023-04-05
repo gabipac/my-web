@@ -38,6 +38,9 @@ body {
       line-height: 1;
       text-transform: uppercase;
       font-weight:600;
+      @media only screen and (max-width: 600px) {
+        font-size: 50px;
+      }
     }
     &:nth-child(3) {
       position: relative;
@@ -59,4 +62,12 @@ p {
 hr {
   border: .5px solid rgba(57, 61, 81, .2);
   margin: 50px 0;
+}
+.v-dialog {
+  &.v-overlay {
+    .photo-dialog {
+      overflow-y: scroll !important;
+      overflow-x: hidden;
+    }
+  }
 }

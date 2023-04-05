@@ -6,7 +6,7 @@
                 <v-col cols="10" sm="10" md="6" lg="6" align="center">
                     <h2>Me on social’s</h2>
                     <div>
-                        <v-icon icon="mdi-linkedin"></v-icon>
+                        <v-icon icon="mdi-linkedin" to="https://www.linkedin.com/in/gabriela-paciaroni-39a04b270"></v-icon>
                         <v-icon icon="mdi-instagram"></v-icon>
                         <v-icon icon="mdi-github"></v-icon>
                         <v-icon icon="mdi-slack"></v-icon>
