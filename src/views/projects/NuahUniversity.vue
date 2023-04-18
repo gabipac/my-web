@@ -1,76 +1,63 @@
 <template>
-    <section>
-        <project-card
-                id="nuahuni"
-                bg_title="Nuah University"
-                name_title="Nuah University"
-                subname_title="about this project"
-                :img_intro="require('@/assets/imgs/logo-nuah-uni.svg')">
-            <div class="ml-md-10 ml-lg-10">
-                <p class="mb-3"><strong>Client: </strong>NUAH</p>
-                <p class="mb-3"><strong>Category: </strong>Crypto startup</p>
-                <p class="mb-3"><strong>Release: </strong>2023</p>
-                <p class="mb-3"><strong>Description: </strong>NUAH is a global movement that promotes a decentralised world, with technology easy to use and available for everyone.</p>
-                <p class="mb-3"><strong>Website: </strong>nuah.university</p>
-                <div class="my-tasks">
-                    <p class="mr-3"><strong>Tasks:</strong></p>
-                    <span>UX + UI design</span>
-                    <span>Front-end</span>
-                    <span>vuejs</span>
-                    <span>VUETIFY</span>
-                    <span>Research</span>
-                    <span>app</span>
-                </div>
+    <project-card
+            id="nuahuni"
+            bg_title="Nuah University"
+            name_title="Nuah University"
+            subname_title="about this project"
+            :img_intro="require('@/assets/imgs/logo-nuah-uni.svg')">
+        <div class="ml-md-10 ml-lg-10">
+            <p class="mb-3"><strong>Client: </strong>NUAH</p>
+            <p class="mb-3"><strong>Category: </strong>Crypto startup</p>
+            <p class="mb-3"><strong>Release: </strong>2023</p>
+            <p class="mb-3"><strong>Description: </strong>NUAH is a global movement that promotes a decentralised world, with technology easy to use and available for everyone.</p>
+            <p class="mb-3"><strong>Website: </strong>nuah.university</p>
+            <div class="my-tasks">
+                <p class="mr-3"><strong>Tasks:</strong></p>
+                <span>UX + UI design</span>
+                <span>Front-end</span>
+                <span>vuejs</span>
+                <span>VUETIFY</span>
+                <span>Research</span>
+                <span>app</span>
             </div>
-        </project-card>
+        </div>
+    </project-card>
 
-        <v-row justify="center" class="bg-light">
-            <v-col cols="10" sm="10" md="10" align="start" class="mb-n16">
-                <h2>layouts</h2>
-            </v-col>
-        </v-row>
+    <section class="bg-light">
+        <v-container>
+            <v-row justify="center">
+                <v-col cols="10" sm="10" md="10" align="start" class="mb-n16">
+                    <h2>layouts</h2>
+                </v-col>
+            </v-row>
 
-        <v-row justify="center" class="bg-light mt-n5 pb-16">
-            <v-col cols="10" sm="10" md="10" align="center">
-                <v-row justify="center" class="pb-16">
-                    <template v-for="(layout, l) in layouts" :key="l">
-                        <v-col cols="10" sm="5" md="4" lg="4" align="center">
-                            <v-hover v-slot="{ isHovering, props }">
-                                <v-card
-                                        class="mx-auto"
-                                        color="grey-lighten-4"
-                                        max-width="350"
-                                        v-bind="props"
-                                        @click="dialog = !dialog">
-
-                                    <v-img
-                                            :aspect-ratio="1/1"
-                                            cover
-                                            :src="layout.img">
-                                        <v-expand-transition>
-                                            <div
-                                                    v-if="isHovering"
-                                                    class="d-flex transition-fast-in-fast-out v-card--reveal"
-                                                    style="height: 100%"
-                                            >
-                                                <v-card-title class="d-flex flex-column align-center pr-5 pl-5">
-                                                    <p class="layout-title" v-html="layout.title"></p>
-                                                </v-card-title>
-                                                <v-dialog v-model="dialog" content-class="photo-dialog" max-width="800px">
-                                                    <img :src="layout.img" />
-                                                </v-dialog>
-                                            </div>
-                                        </v-expand-transition>
-                                    </v-img>
-                                </v-card>
-                            </v-hover>
+            <v-row justify="center" class="mt-15">
+                <v-col md="10" align="center">
+                    <v-row justify="center" class="pb-16">
+                        <v-col cols="10" sm="5" md="4" lg="4" align="center" v-for="(layout, l) in layouts" :key="l">
+                            <a @click="openDialog(layout.img)" class="portfolio-projects-item">
+                                <div class="item-img">
+                                    <img class="layout" :src="layout.img"/>
+                                </div>
+                                <div class="item-hover-details">
+                                    <span class="item-name" v-html="layout.title"></span>
+                                </div>
+                            </a>
                         </v-col>
-                    </template>
-                </v-row>
-            </v-col>
-        </v-row>
-        <footer-layout></footer-layout>
+                    </v-row>
+                </v-col>
+            </v-row>
+
+            <v-dialog v-model="dialog" content-class="photo-dialog" max-width="800px">
+                <v-card color="transparent">
+                    <v-btn class="close" icon="mdi-window-close" @click="dialog = false"></v-btn>
+                    <img :src="dialogImg" />
+                </v-card>
+            </v-dialog>
+        </v-container>
     </section>
+
+    <FooterLayout/>
 </template>
 
 <script>
@@ -84,6 +71,7 @@
         },
         data: () => ({
             dialog: false,
+            dialogImg: '',
             layouts: [
                 {
                     title: 'Nav bars',
@@ -106,11 +94,41 @@
                     img: require('@/assets/imgs/nu-modal-videos.jpg'),
                 },
                 {
+                    title: 'Modal videos',
+                    img: require('@/assets/imgs/nu-modal-videos-screen.jpg'),
+                },
+                {
                     title: 'UI',
                     img: require('@/assets/imgs/nu-select-tabs.jpg'),
                 },
+                {
+                    title: 'Full form',
+                    img: require('@/assets/imgs/nu-form1.jpg'),
+                },
+                {
+                    title: 'Payment system',
+                    img: require('@/assets/imgs/nu-form2.jpg'),
+                },
+                {
+                    title: 'Social Media<br>banner',
+                    img: require('@/assets/imgs/nu-banner1.jpg'),
+                },
+                {
+                    title: 'Social Media<br>banner',
+                    img: require('@/assets/imgs/nu-banner2.jpg'),
+                },
+                {
+                    title: 'Social Media<br>banner',
+                    img: require('@/assets/imgs/nu-banner3.jpg'),
+                },
             ],
         }),
+        methods: {
+            openDialog(input) {
+                this.dialog = !this.dialog;
+                this.dialogImg = input
+            }
+        }
     }
 </script>
 
@@ -144,34 +162,7 @@
             font-size: 20px;
         }
     }
-    .v-card--reveal {
-        background-color: #F8FAFF;
-        align-items: center;
-        bottom: 0;
-        justify-content: center;
-        opacity: .9;
-        position: absolute;
-        width: 100%;
-        flex-wrap: wrap;
-        word-break: break-word;
-    }
-    .v-card-title {
-        padding: 10px 20px;
 
-        .layout-title {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1;
-            color: #393D51;
-            text-transform: uppercase;
-            font-size: 35px;
-            text-align: center;
-            font-weight: 600;
-            word-break: break-word;
-            @media only screen and (max-width: 960px) {
-                font-size: 35px;
-            }
-        }
-    }
     .v-overlay--active .v-overlay__scrim {
         display: none;
     }
@@ -179,13 +170,68 @@
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, .5);
     }
-    img {
-        position: relative !important;
-        min-width: 600px;
-        @media only screen and (max-width: 650px) {
-            min-width: 300px;
+
+    .portfolio-projects-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .item-img {
+            overflow: hidden;
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+            .layout {
+                overflow: hidden;
+                object-fit: cover;
+                min-height: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .item-hover-details {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            margin-bottom: -100%;
+            transition: all .3s ease;
+            background-color: white;
+
+            .item-name {
+                color: #393D51;
+                text-transform: uppercase;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 800;
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+        &:hover {
+            .item-hover-details {
+                margin-bottom: 0;
+                opacity: .9;
+            }
         }
     }
-
+    .v-card {
+        .close {
+            align-self: flex-end;
+            background: transparent;
+            box-shadow: none;
+            color: #F8FAFF;
+        }
+    }
 
 </style>

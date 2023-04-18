@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-intro">
+    <section class="bg-intro" id="home-page">
         <div class="stars" :style=" 'background-image: url(' + require('@/assets/imgs/bg-stars.png') + ')' "></div>
         <div>
             <span></span>
@@ -17,7 +17,7 @@
             <h3>make it virtual</h3>
         </div>
     </section>
-    <portfolio-section/>
+    <portfolio-section />
     <about-section/>
     <contact-section/>
     <footer-layout/>

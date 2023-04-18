@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-light">
+    <section class="bg-light" id="about">
         <v-container>
             <v-row justify="center">
                 <v-col cols="10" sm="10" md="10" align="center">

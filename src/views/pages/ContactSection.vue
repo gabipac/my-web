@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-light">
+    <section class="bg-light" id="contact">
         <v-container>
             <v-row justify="center">
                 <v-col cols="10" sm="10" md="10" align="center">
@@ -12,7 +12,7 @@
 
                 <v-col cols="10" sm="6" md="5" align="center" class="mt-15">
                     <p>Let me know how can I help you. Make me your question. Ask for advice. Request my service. Suggest me improvements. Leave your opinion!</p>
-                    <v-btn>contact</v-btn>
+                    <v-btn href="mailto:gabrielapaciaroni@gmail.com">contact</v-btn>
                 </v-col>
             </v-row>
         </v-container>

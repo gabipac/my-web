@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-light">
+    <section class="bg-light" id="portfolio">
         <v-container>
             <v-row>
                 <v-col>

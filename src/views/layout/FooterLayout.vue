@@ -6,14 +6,13 @@
                 <v-col cols="10" sm="10" md="6" lg="6" align="center">
                     <h2>Me on social’s</h2>
                     <div>
-                        <v-icon icon="mdi-linkedin" to="https://www.linkedin.com/in/gabriela-paciaroni-39a04b270"></v-icon>
-                        <v-icon icon="mdi-instagram"></v-icon>
-                        <v-icon icon="mdi-github"></v-icon>
-                        <v-icon icon="mdi-slack"></v-icon>
+                        <a href="https://www.linkedin.com/in/gabriela-paciaroni-39a04b270" target="_blank"><v-icon icon="mdi-linkedin"></v-icon></a>
+                        <a href="https://instagram.com/soloveoamor?igshid=ZDdkNTZiNTM=" target="_blank"><v-icon icon="mdi-instagram"></v-icon></a>
+                        <a href="https://github.com/gabipac" target="_blank"><v-icon icon="mdi-github"></v-icon></a>
                     </div>
                 </v-col>
                 <v-col cols="10" sm="10" md="6" lg="6">
-                    <p class="para-light">gabipac@gmail.com</p>
+                    <p class="para-light">gabrielapaciaroni@gmail.com</p>
                 </v-col>
             </v-row>
             <v-row justify="center" class="pt-15 ma-0 align-end align-self-end">
@@ -43,6 +42,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        position: relative;
     }
     .v-container {
         min-height: 300px;

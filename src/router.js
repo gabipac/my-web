@@ -36,13 +36,19 @@ const router = createRouter({
             redirect: '/home'
         }
     ],
-    // scrollBehavior(to, from, savedPosition) {
-    //     console.log(to, from, savedPosition);
-    //     if (savedPosition) {
-    //         return savedPosition;
-    //     }
-    //     return {top: 0, left: 0};
-    // }
+    scrollBehavior: (to, from, savedPosition) => {
+        console.log(from);
+        if (to.hash) {
+            return {
+                selector: to.hash,
+                behavior: 'smooth',
+            };
+        } else if(savedPosition){
+            return savedPosition
+        }
+
+        return{ left: 0, top: 0}
+    }
 });
 
 export default router;
