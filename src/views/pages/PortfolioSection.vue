@@ -85,7 +85,7 @@
                     title: 'CULTURE',
                     subtext: 'Branding + identity',
                     subtitle: 'ADOBE (PS - XD - AI)',
-                    img: require('@/assets/imgs/logo-culture.svg'),
+                    img: require('@/assets/imgs/logo-culture2.svg'),
                     url: ('/culture')
                 },
             ],
@@ -122,7 +122,7 @@
             font-weight: 600;
             letter-spacing: -1px;
             @media (min-width: 960px) and (max-width: 1280px) {
-                font-size: 34px;
+                font-size: 32px;
             }
         }
         .item-subtext {
@@ -132,6 +132,7 @@
             letter-spacing: -0.5px;
             @media (min-width: 960px) and (max-width: 1280px) {
                 font-size: 16px;
+                letter-spacing: -1.5px;
             }
         }
         .item-subtitle {
@@ -143,7 +144,8 @@
             color: #FF614D;
             font-weight: 600;
             @media (min-width: 960px) and (max-width: 1280px) {
-                font-size: 18px;
+                font-size: 17px;
+                letter-spacing: -1.5px;
             }
         }
     }
