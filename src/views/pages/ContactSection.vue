@@ -12,7 +12,7 @@
 
                 <v-col cols="10" sm="6" md="5" align="center" class="mt-15">
                     <p>Let me know how can I help you. Make me your question. Ask for advice. Request my service. Suggest me improvements. Leave your opinion!</p>
-                    <v-btn href="mailto:gabrielapaciaroni@gmail.com">contact</v-btn>
+                    <v-btn href="mailto:imaginegabipac@gmail.com">contact</v-btn>
                 </v-col>
             </v-row>
         </v-container>
