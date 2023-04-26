@@ -12,7 +12,7 @@
                     </div>
                 </v-col>
                 <v-col cols="10" sm="10" md="6" lg="6">
-                    <p class="para-light">gabrielapaciaroni@gmail.com</p>
+                    <p class="para-light">imaginegabipac@gmail.com</p>
                 </v-col>
             </v-row>
             <v-row justify="center" class="pt-15 ma-0 align-end align-self-end">
